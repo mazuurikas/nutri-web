@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Product} from "./product.model";
+import {Recipe} from "./recipe.model";
 
 @Component({
   selector: 'app-products',
@@ -7,9 +8,9 @@ import {Product} from "./product.model";
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  products: Product[] = [
-    {name: "TestProduct1", description: "Baloney sandwich with cucumber"},
-    {name: "WolfCookie", description: "Made from Mongolian wolves"}
+  products: Array<Product> = [
+    {name: "TestProduct1", recipe: new Recipe("Baloney sandwich with cucumber")},
+    {name: "WolfCookie", recipe: new Recipe("Made from Mongolian wolves")}
   ];
 
   constructor() {

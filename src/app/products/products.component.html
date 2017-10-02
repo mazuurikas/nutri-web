@@ -1,3 +1,4 @@
+<button>New product</button>
 <div class="table-responsive">
   <table *ngIf="products">
     <thead>
@@ -9,7 +10,7 @@
     <tbody>
     <tr *ngFor="let product of products">
       <td>{{product.name}}</td>
-      <td>{{product.description}}</td>
+      <td>{{product.recipe.description}}</td>
     </tr>
     </tbody>
   </table>

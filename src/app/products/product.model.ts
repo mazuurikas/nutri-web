@@ -1,4 +1,6 @@
+import {Recipe} from "./recipe.model";
+
 export class Product {
-  constructor(public name: string, public description: string) {
+  constructor(public name: string, public recipe: Recipe) {
   }
 }
