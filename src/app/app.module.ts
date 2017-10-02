@@ -5,6 +5,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AppComponent} from './app.component';
 import {ProductsComponent} from './products/products.component';
 import {HttpClientModule} from "@angular/common/http";
+import {ProductsModule} from "./products/products.module";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Product} from "./product.model";
-import {Recipe} from "./recipe.model";
+import {ProductsService} from "./products.service";
 
 @Component({
   selector: 'app-products',
@@ -8,15 +8,19 @@ import {Recipe} from "./recipe.model";
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  products: Array<Product> = [
-    {name: "TestProduct1", recipe: new Recipe("Baloney sandwich with cucumber")},
-    {name: "WolfCookie", recipe: new Recipe("Made from Mongolian wolves")}
-  ];
+  products: Product[];
 
-  constructor() {
+  constructor(private productsService: ProductsService) {
   }
 
   ngOnInit() {
+    this.productsService.get().subscribe(
+      (data => {
+          this.products = data;
+        }
+      ), () => {
+        console.log('get rekt');
+      });
   }
 
 }
