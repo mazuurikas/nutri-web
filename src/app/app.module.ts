@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
-import {AppComponent} from './app.component';
+import {MainComponent} from './layouts/main/main.component';
 import {ProductComponent} from './product/product.component';
 import {HttpClientModule} from "@angular/common/http";
 import {ProductModule} from "./product/product.module";
@@ -11,7 +11,7 @@ import {NavbarModule} from "./layouts/navbar/navbar.module";
 
 @NgModule({
   declarations: [
-    AppComponent,
+    MainComponent,
     ProductComponent,
     NavbarComponent
   ],
@@ -23,7 +23,7 @@ import {NavbarModule} from "./layouts/navbar/navbar.module";
     NavbarModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [MainComponent]
 })
 export class AppModule {
 }
