@@ -5,8 +5,7 @@ import {Recipe} from "./recipe.model";
 
 @Component({
   selector: 'app-products',
-  templateUrl: './product.component.html',
-  styleUrls: []
+  templateUrl: './product.component.html'
 })
 export class ProductComponent implements OnInit {
   products: Product[];

@@ -7,6 +7,7 @@ import {ProductModule} from "./product/product.module";
 import {NavbarComponent} from "./layouts/navbar/navbar.component";
 import {LayoutRoutingModule} from "./layouts/layout-routing.module";
 import {HomeModule} from "./home/home.module";
+import {SpecificationModule} from "./specification/specification.module";
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import {HomeModule} from "./home/home.module";
     LayoutRoutingModule,
     NgbModule.forRoot(),
     HomeModule,
-    ProductModule
+    ProductModule,
+    SpecificationModule
   ],
   declarations: [
     MainComponent,
