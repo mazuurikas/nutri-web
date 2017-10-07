@@ -5,7 +5,7 @@ import {Product} from "./product.model";
 import "rxjs/add/operator/map";
 
 @Injectable()
-export class ProductsService {
+export class ProductService {
 
   constructor(private http: HttpClient) {
   }

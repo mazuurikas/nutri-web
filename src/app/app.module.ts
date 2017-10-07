@@ -3,24 +3,22 @@ import {NgModule} from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {MainComponent} from './layouts/main/main.component';
-import {ProductComponent} from './product/product.component';
-import {HttpClientModule} from "@angular/common/http";
 import {ProductModule} from "./product/product.module";
 import {NavbarComponent} from "./layouts/navbar/navbar.component";
-import {NavbarModule} from "./layouts/navbar/navbar.module";
+import {LayoutRoutingModule} from "./layouts/layout-routing.module";
+import {HomeModule} from "./home/home.module";
 
 @NgModule({
-  declarations: [
-    MainComponent,
-    ProductComponent,
-    NavbarComponent
-  ],
   imports: [
     BrowserModule,
-    HttpClientModule,
+    LayoutRoutingModule,
     NgbModule.forRoot(),
-    ProductModule,
-    NavbarModule
+    HomeModule,
+    ProductModule
+  ],
+  declarations: [
+    MainComponent,
+    NavbarComponent
   ],
   providers: [],
   bootstrap: [MainComponent]
