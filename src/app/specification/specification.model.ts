@@ -10,5 +10,11 @@ export class Specification {
               public carbohydrates: number,
               public sugars: number,
               public protein: number,
-              public salt: number) {}
+              public salt: number) {
+  }
+}
+
+export class SpecificationResource {
+  constructor(public specifications: Specification[]) {
+  }
 }
