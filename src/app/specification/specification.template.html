@@ -1,1 +1,16 @@
-<p>Specification! Template!</p>
+<div class="card" style="width: 20rem;" *ngFor="let spec of specifications">
+  <div class="card-body">
+    <h4 class="card-title">{{spec.producer}} {{spec.name}}</h4>
+    <p class="card-text">{{spec.comment}}</p>
+    <p class="card-text">
+      <b>energy: </b>{{spec.energyKCal}}kCal / {{spec.energyKj}}kJ<br>
+      <b>fats: </b>{{spec.fats}}g<br>
+      <b>saturatedFats: </b>{{spec.saturatedFats}}g<br>
+      <b>carbohydrates: </b> {{spec.carbohydrates}}g<br>
+      <b>sugars: </b>{{spec.sugars}}g<br>
+      <b>protein: </b>{{spec.protein}}g<br>
+      <b>salt: </b>{{spec.salt}}g<br>
+    </p>
+    <a href="#" class="btn btn-primary">Edit</a>
+  </div>
+</div>
