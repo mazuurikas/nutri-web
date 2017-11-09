@@ -1,4 +1,5 @@
-<div class="alert alert-primary" *ngIf="specifications.length == 0">No specifications found!</div>
+<div class="alert alert-primary" *ngIf="!specifications || specifications.length == 0">No specifications found!</div>
+<app-add-specification></app-add-specification>
 <div class="card" style="width: 20rem;" *ngFor="let spec of specifications">
   <div class="card-body">
     <h4 class="card-title">{{spec.producer}} {{spec.name}}</h4>
