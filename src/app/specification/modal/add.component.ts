@@ -1,32 +1,24 @@
 import {Component} from '@angular/core';
 
-import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {Specification} from "../specification.model";
 
 @Component({
   selector: 'app-add-specification',
   templateUrl: './add.template.html'
 })
 export class AddSpecificationModalComponent {
-  closeResult: string;
+  specification = new Specification(0, "", "", "", 2, 3, 5, 4, 3, 2, 2, 2);
 
   constructor(private modalService: NgbModal) {
   }
 
   open(content) {
-    this.modalService.open(content).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
+    this.modalService.open(content);
   }
 
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return `with: ${reason}`;
-    }
+  save() {
+    console.log(this.specification);
   }
+
 }
