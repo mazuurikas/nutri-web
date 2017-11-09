@@ -15,6 +15,10 @@ export class SpecificationComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.populateSpecifications();
+  }
+
+  public populateSpecifications(): void {
     this.http.get <Resources<SpecificationResource>>('http://localhost:8181/specifications').subscribe(
       data => {
         this.specifications = data._embedded.specifications;
