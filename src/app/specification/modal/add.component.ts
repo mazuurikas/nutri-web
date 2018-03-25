@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 
 import {NgbModal, NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
-import {Specification} from "../specification.model";
-import {HttpClient} from "@angular/common/http";
+import {Specification} from '../specification.model';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-add-specification',
@@ -10,7 +10,7 @@ import {HttpClient} from "@angular/common/http";
 })
 export class AddSpecificationModalComponent {
   ngbModalRef: NgbModalRef;
-  specification = new Specification("", "", "", 2, 3, 5, 4, 3, 2, 2, 2);
+  specification = new Specification(null, null, null, null, null, null, null, null, null, null, null);
 
   constructor(private modalService: NgbModal,
               private http: HttpClient) {
@@ -28,6 +28,6 @@ export class AddSpecificationModalComponent {
       (data) => {
         console.log(data);
       }
-    )
+    );
   }
 }

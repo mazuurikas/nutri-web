@@ -9,11 +9,47 @@
     <form #heroForm="ngForm">
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" class="form-control" [(ngModel)]="specification.name" id="name" name = "name">
+        <input type="text" class="form-control" [(ngModel)]="specification.name" id="name" name="name" required>
       </div>
       <div class="form-group">
         <label for="producer">Producer</label>
-        <input type="text" class="form-control" [(ngModel)]="specification.producer" id="producer" name = "producer">
+        <input type="text" class="form-control" [(ngModel)]="specification.producer" id="producer" name="producer" required>
+      </div>
+      <div class="form-group">
+        <label for="comment">Comment</label>
+        <input type="text" class="form-control" [(ngModel)]="specification.comment" id="comment" name="comment" required>
+      </div>
+      <div class="form-group">
+        <label for="energyKj">EnergyKj</label>
+        <input type="number" class="form-control" [(ngModel)]="specification.energyKj" id="energyKj" name="energyKj" required>
+      </div>
+      <div class="form-group">
+        <label for="energyKCal">EnergyKCal</label>
+        <input type="number" class="form-control" [(ngModel)]="specification.energyKCal" id="energyKCal" name="energyKCal" required>
+      </div>
+      <div class="form-group">
+        <label for="fats">Fats</label>
+        <input type="number" class="form-control" [(ngModel)]="specification.fats" id="fats" name="fats" required>
+      </div>
+      <div class="form-group">
+        <label for="saturatedFats">Satureted fats</label>
+        <input type="number" class="form-control" [(ngModel)]="specification.saturatedFats" id="saturatedFats" name="saturatedFats" required>
+      </div>
+      <div class="form-group">
+        <label for="carbohydrates">Carbohydrates</label>
+        <input type="number" class="form-control" [(ngModel)]="specification.carbohydrates" id="carbohydrates" name="carbohydrates" required>
+      </div>
+      <div class="form-group">
+        <label for="sugars">Sugars</label>
+        <input type="number" class="form-control" [(ngModel)]="specification.sugars" id="sugars" name="sugars" required>
+      </div>
+      <div class="form-group">
+        <label for="protein">Protein</label>
+        <input type="number" class="form-control" [(ngModel)]="specification.protein" id="protein" name="protein" required>
+      </div>
+      <div class="form-group">
+        <label for="salt">Salt</label>
+        <input type="number" class="form-control" [(ngModel)]="specification.salt" id="salt" name="salt" required>
       </div>
     </form>
   </div>
