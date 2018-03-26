@@ -48,4 +48,19 @@ export class AddSpecificationModalComponent {
       );
     }
   }
+
+  delete() {
+    if (this.specification._links) {
+      this.http.delete(this.specification._links.self.href).subscribe(
+        () => {
+          this.ngbModalRef.close();
+        },
+        (data) => {
+          console.log(data);
+        }
+      );
+    } else {
+      this.ngbModalRef.close();
+    }
+  }
 }

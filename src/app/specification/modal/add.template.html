@@ -13,19 +13,23 @@
       </div>
       <div class="form-group">
         <label for="producer">Producer</label>
-        <input type="text" class="form-control" [(ngModel)]="specification.producer" id="producer" name="producer" required>
+        <input type="text" class="form-control" [(ngModel)]="specification.producer" id="producer" name="producer"
+               required>
       </div>
       <div class="form-group">
         <label for="comment">Comment</label>
-        <input type="text" class="form-control" [(ngModel)]="specification.comment" id="comment" name="comment" required>
+        <input type="text" class="form-control" [(ngModel)]="specification.comment" id="comment" name="comment"
+               required>
       </div>
       <div class="form-group">
         <label for="energyKj">EnergyKj</label>
-        <input type="number" class="form-control" [(ngModel)]="specification.energyKj" id="energyKj" name="energyKj" required>
+        <input type="number" class="form-control" [(ngModel)]="specification.energyKj" id="energyKj" name="energyKj"
+               required>
       </div>
       <div class="form-group">
         <label for="energyKCal">EnergyKCal</label>
-        <input type="number" class="form-control" [(ngModel)]="specification.energyKCal" id="energyKCal" name="energyKCal" required>
+        <input type="number" class="form-control" [(ngModel)]="specification.energyKCal" id="energyKCal"
+               name="energyKCal" required>
       </div>
       <div class="form-group">
         <label for="fats">Fats</label>
@@ -33,11 +37,13 @@
       </div>
       <div class="form-group">
         <label for="saturatedFats">Satureted fats</label>
-        <input type="number" class="form-control" [(ngModel)]="specification.saturatedFats" id="saturatedFats" name="saturatedFats" required>
+        <input type="number" class="form-control" [(ngModel)]="specification.saturatedFats" id="saturatedFats"
+               name="saturatedFats" required>
       </div>
       <div class="form-group">
         <label for="carbohydrates">Carbohydrates</label>
-        <input type="number" class="form-control" [(ngModel)]="specification.carbohydrates" id="carbohydrates" name="carbohydrates" required>
+        <input type="number" class="form-control" [(ngModel)]="specification.carbohydrates" id="carbohydrates"
+               name="carbohydrates" required>
       </div>
       <div class="form-group">
         <label for="sugars">Sugars</label>
@@ -45,7 +51,8 @@
       </div>
       <div class="form-group">
         <label for="protein">Protein</label>
-        <input type="number" class="form-control" [(ngModel)]="specification.protein" id="protein" name="protein" required>
+        <input type="number" class="form-control" [(ngModel)]="specification.protein" id="protein" name="protein"
+               required>
       </div>
       <div class="form-group">
         <label for="salt">Salt</label>
@@ -54,6 +61,7 @@
     </form>
   </div>
   <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="delete()">Delete</button>
     <button type="button" class="btn btn-primary" (click)="save()">Save</button>
     <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
   </div>
