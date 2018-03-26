@@ -5,11 +5,12 @@ import {Resources} from "../shared/resource.model";
 
 @Component({
   selector: 'app-specification',
-  templateUrl: './specification.template.html'
+  templateUrl: './specification.template.html',
+  styleUrls: ['./specification.component.css']
 })
 
 export class SpecificationComponent implements OnInit {
-  specifications: Specification[];
+  specifications: Specification[] = [];
 
   constructor(private http: HttpClient) {
   }

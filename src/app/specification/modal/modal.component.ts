@@ -5,13 +5,14 @@ import {Specification} from '../specification.model';
 import {HttpClient} from '@angular/common/http';
 
 @Component({
-  selector: 'app-add-specification',
-  templateUrl: './add.template.html'
+  selector: 'app-specification-modal',
+  templateUrl: './modal.template.html'
 })
 export class AddSpecificationModalComponent {
   ngbModalRef: NgbModalRef;
   @Input() specification: Specification;
   @Input() buttonText: string;
+  @Input() buttonClass: string;
 
   constructor(private modalService: NgbModal,
               private http: HttpClient) {
@@ -20,6 +21,9 @@ export class AddSpecificationModalComponent {
   ngOnInit(): void {
     if (!this.specification) {
       this.specification = new Specification(null, null, null, null, null, null, null, null, null, null, null, null);
+    }
+    if(!this.buttonClass) {
+      this.buttonClass = '';
     }
   }
 
