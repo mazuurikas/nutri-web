@@ -19,8 +19,7 @@ export class AddSpecificationModalComponent {
 
   ngOnInit(): void {
     if (!this.specification) {
-      console.log('no spec set');
-      this.specification = new Specification(null, null, null, null, null, null, null, null, null, null, null);
+      this.specification = new Specification(null, null, null, null, null, null, null, null, null, null, null, null);
     }
   }
 
@@ -29,13 +28,24 @@ export class AddSpecificationModalComponent {
   }
 
   save() {
-    this.http.post('http://localhost:8181/specifications', this.specification).subscribe(
-      () => {
-        this.ngbModalRef.close();
-      },
-      (data) => {
-        console.log(data);
-      }
-    );
+    if (this.specification._links) {
+      this.http.put(this.specification._links.self.href, this.specification).subscribe(
+        () => {
+          this.ngbModalRef.close();
+        },
+        (data) => {
+          console.log(data);
+        }
+      );
+    } else {
+      this.http.post('http://localhost:8181/specifications', this.specification).subscribe(
+        () => {
+          this.ngbModalRef.close();
+        },
+        (data) => {
+          console.log(data);
+        }
+      );
+    }
   }
 }

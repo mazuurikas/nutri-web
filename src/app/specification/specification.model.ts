@@ -1,4 +1,6 @@
-export class Specification {
+import {Resource} from '../shared/resource.model';
+
+export class Specification extends Resource {
   constructor(public name: string,
               public producer: string,
               public comment: string,
@@ -9,7 +11,9 @@ export class Specification {
               public carbohydrates: number,
               public sugars: number,
               public protein: number,
-              public salt: number) {
+              public salt: number,
+              public id?: number) {
+    super();
   }
 }
 

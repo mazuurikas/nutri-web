@@ -5,14 +5,18 @@ export class Resources<T> {
   }
 }
 
+export class Resource {
+  constructor(public _links?: Links) {
+  }
+}
+
 class Link {
-  constructor(public href: String) {
+  constructor(public href: string) {
   }
 }
 
 class Links {
-  constructor(public self: Link,
-              public profile: Link) {
+  constructor(public self: Link) {
   }
 }
 
