@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 import {NgbModal, NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
 import {Specification} from '../specification.model';
@@ -10,10 +10,18 @@ import {HttpClient} from '@angular/common/http';
 })
 export class AddSpecificationModalComponent {
   ngbModalRef: NgbModalRef;
-  specification = new Specification(null, null, null, null, null, null, null, null, null, null, null);
+  @Input() specification: Specification;
+  @Input() buttonText: string;
 
   constructor(private modalService: NgbModal,
               private http: HttpClient) {
+  }
+
+  ngOnInit(): void {
+    if (!this.specification) {
+      console.log('no spec set');
+      this.specification = new Specification(null, null, null, null, null, null, null, null, null, null, null);
+    }
   }
 
   open(content) {
