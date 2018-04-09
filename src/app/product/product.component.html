@@ -6,12 +6,14 @@
       <tr>
         <th>Name</th>
         <th>Description</th>
+        <th></th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let product of products">
         <td>{{product.name}}</td>
         <td>{{product.recipe?.description}}</td>
+        <td><app-product-modal [product]="product" [buttonText]="'edit'"></app-product-modal></td>
       </tr>
       </tbody>
     </table>
