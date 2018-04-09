@@ -1,6 +1,8 @@
-import {Recipe} from "./recipe.model";
+import {Recipe} from './recipe.model';
+import {Resource} from '../shared/resource.model';
 
-export class Product {
-  constructor(public name: string, public recipe: Recipe) {
+export class Product extends Resource {
+  constructor(public name: string, public recipe?: Recipe) {
+    super();
   }
 }
