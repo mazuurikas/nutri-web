@@ -6,13 +6,13 @@
       <h4 class="card-title">{{spec.producer}} {{spec.name}}</h4>
       <p class="card-text">{{spec.comment}}</p>
       <p class="card-text">
-        <b>energy: </b>{{spec.energyKCal}}kCal / {{spec.energyKj}}kJ<br>
-        <b>fats: </b>{{spec.fats}}g<br>
-        <b>saturatedFats: </b>{{spec.saturatedFats}}g<br>
-        <b>carbohydrates: </b> {{spec.carbohydrates}}g<br>
-        <b>sugars: </b>{{spec.sugars}}g<br>
-        <b>protein: </b>{{spec.protein}}g<br>
-        <b>salt: </b>{{spec.salt}}g<br>
+        <b>energy: </b >{{spec.energyKCal | round:0}}kcal / {{spec.energyKCal | energyConverter}}kJ<br>
+        <b>fats: </b>{{spec.fats | round:1}}g<br>
+        <b>saturatedFats: </b>{{spec.saturatedFats | round:1}}g<br>
+        <b>carbohydrates: </b> {{spec.carbohydrates | round:1}}g<br>
+        <b>sugars: </b>{{spec.sugars | round:1}}g<br>
+        <b>protein: </b>{{spec.protein | round:1}}g<br>
+        <b>salt: </b>{{spec.salt | round:3}}g<br>
       </p>
       <app-specification-modal [specification]="spec" [buttonText]="'edit'"></app-specification-modal>
     </div>

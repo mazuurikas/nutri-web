@@ -4,7 +4,6 @@ export class Specification extends Resource {
   constructor(public name: string,
               public producer: string,
               public comment: string,
-              public energyKj: number,
               public energyKCal: number,
               public fats: number,
               public saturatedFats: number,

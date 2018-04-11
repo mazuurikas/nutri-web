@@ -20,7 +20,7 @@ export class AddSpecificationModalComponent {
 
   ngOnInit(): void {
     if (!this.specification) {
-      this.specification = new Specification(null, null, null, null, null, null, null, null, null, null, null, null);
+      this.specification = new Specification(null, null, null, null, null, null, null, null, null, null, null);
     }
     if(!this.buttonClass) {
       this.buttonClass = '';
